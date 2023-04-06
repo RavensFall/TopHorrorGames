@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/horrorListFragment">
+
+    <fragment
+        android:id="@+id/horrorListFragment"
+        android:name="com.example.tophorrorgames.HorrorListFragment"
+        android:label="fragment_horror_list"
+        tools:layout="@layout/fragment_horror_list" >
+        <action
+            android:id="@+id/action_horrorListFragment_to_horrorInfoFragment"
+            app:destination="@id/horrorInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/horrorInfoFragment"
+        android:name="com.example.tophorrorgames.HorrorInfoFragment"
+        android:label="fragment_horror_info"
+        tools:layout="@layout/fragment_horror_info" >
+        <argument
+            android:name="itemhorror"
+            app:argType="com.example.tophorrorgames.ItemHorror" />
+    </fragment>
+</navigation>
